@@ -2,7 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <!-- HERO / BANNER (tipo Amazon) -->
     <div class="fru-hero mt-3 mb-4">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner rounded-4 overflow-hidden shadow-sm">
@@ -42,7 +41,6 @@
         </div>
     </div>
 
-    <!-- CATEGORÍAS (tipo Amazon “departamentos”) -->
     <div class="row g-3 mb-4">
         <div class="col-6 col-md-3">
             <div class="card fru-cat shadow-sm h-100">

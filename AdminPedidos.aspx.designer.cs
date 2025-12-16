@@ -11,25 +11,25 @@ namespace Semestral_Fruteriaa
 {
 
 
-    public partial class SiteMaster
+    public partial class AdminPedidos
     {
 
         /// <summary>
-        /// Control phAdmin.
+        /// Control lblMsg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAdmin;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
-        /// Control MainContent.
+        /// Control gvPedidosAdmin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView gvPedidosAdmin;
     }
 }

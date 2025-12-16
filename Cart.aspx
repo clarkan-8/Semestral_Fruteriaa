@@ -28,10 +28,10 @@
                     <asp:TemplateField HeaderText="Producto">
                         <ItemTemplate>
                             <div class="d-flex align-items-center gap-3">
-                                <img src="<%%>" alt="img"
+                                <img src="<%# Eval("ImagenUrl") %>" alt="img"
                                      style="width:72px;height:52px;object-fit:cover;border-radius:12px;" />
                                 <div>
-                                    <div class="fw-semibold"><%# Eval("Nombre")%></div>
+                                    <div class="fw-semibold"><%# Eval("Nombre") %></div>
                                     <div class="text-muted small"><%# Eval("Categoria") %></div>
                                 </div>
                             </div>
@@ -39,7 +39,41 @@
                     </asp:TemplateField>
 
                     <asp:BoundField HeaderText="Precio" DataField="Precio" DataFormatString="${0:0.00}" />
-                    <asp:BoundField HeaderText="Cantidad" DataField="Cantidad" />
+
+                    <asp:TemplateField HeaderText="Cantidad">
+                        <ItemTemplate>
+                            <div class="d-flex align-items-center gap-2">
+
+                                <asp:LinkButton runat="server"
+                                    CssClass="btn btn-sm btn-outline-secondary"
+                                    CommandName="Menos"
+                                    CommandArgument='<%# Eval("Id") %>'>
+                                    -
+                                </asp:LinkButton>
+
+                                <asp:TextBox ID="txtCantidad" runat="server"
+                                    CssClass="form-control form-control-sm text-center"
+                                    Text='<%# Eval("Cantidad") %>'
+                                    style="width:70px;" />
+
+                                <asp:LinkButton runat="server"
+                                    CssClass="btn btn-sm btn-outline-secondary"
+                                    CommandName="Mas"
+                                    CommandArgument='<%# Eval("Id") %>'>
+                                    +
+                                </asp:LinkButton>
+
+                                <asp:LinkButton runat="server"
+                                    CssClass="btn btn-sm btn-warning fw-semibold"
+                                    CommandName="Actualizar"
+                                    CommandArgument='<%# Eval("Id") %>'>
+                                    Actualizar
+                                </asp:LinkButton>
+
+                            </div>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                     <asp:BoundField HeaderText="Subtotal" DataField="Subtotal" DataFormatString="${0:0.00}" />
 
                     <asp:TemplateField HeaderText="Acciones">
